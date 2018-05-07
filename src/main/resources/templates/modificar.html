@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Modificar Usuario</title>
+</head>
+<body>
+<h1> Modificar Usuario </h1>
+<form action="#" th:action="@{/admin/modificar/{id} (id=*{idcliente})}" th:object="${modificar}" method="post">
+<p>Nombre: <input type:"text" th:field="*{nombre}" /></p><br>
+<p>Apellidos: <input type:"text" th:field="*{apellido}" /></p><br>
+<p>E-Mail: <input type:"text" th:field="*{dataLogin.email}" /></p><br>
+<p>Contraseña: <input type:"text" th:field="*{dataLogin.password}" /></p><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

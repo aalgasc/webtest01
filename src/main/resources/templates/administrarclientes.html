@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>LISTADO DE CLIENTES</title>
+</head>
+<body>
+	<h1>LISTADO DE CLIENTES (VISTA 2) </h1>
+	
+	<div th:each="cliente : ${clientes}">
+		<tr>
+			<td> <a th:href="@{/admin/baja/{id}(id=${cliente.idcliente})}">borrar</a>
+			<td> <a th:href="@{/admin/modificar/{id}(id=${cliente.idcliente})}">modificar</a>
+			<td th:text="${cliente.nombre}"/>
+			<td th:text="${cliente.apellido}"/>
+		</tr>
+	</div>
+</body>
+</html>

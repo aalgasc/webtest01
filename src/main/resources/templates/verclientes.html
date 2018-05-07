@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>LISTADO DE CLIENTES</title>
+</head>
+<body>
+<h1>LISTADO DE CLIENTES (VISTA 1) </h1>
+<div th:each="cliente : ${clientes}">
+<tr>
+<td th:text="${cliente.nombre}"/>
+<td th:text="${cliente.apellidos}"/>
+</tr>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>LOG IN</title>
+</head>
+<body>
+<h1>BIENVENIDO</h1>
+<form action="#" th:action="@{/}" th:object="${login}" method="post">
+<p>Correo electronico: <input type:"text" th:field="*{email}" /></p><br>
+<p>Password: <input type:"text" th:field="*{password}" /></p><br>
+<input type="submit" value="Acceder">
+<a href= "/alta"> Alta de Usuario</a>
+<a href= "/admin"> Menu administrador</a>
+
+</body>
+</html>
